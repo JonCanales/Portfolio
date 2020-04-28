@@ -3,8 +3,8 @@
 body{
   font-family: 'Raleway', sans-serif;
   height: 100vh;
-  background: #333333 center center / cover;
-  color: #ccc;
+  background: #c03546 center center / cover;
+  color: white;
   overflow:hidden;
 
 }
@@ -45,7 +45,7 @@ h1{
 
 h2{
   font-size: 2rem;
-  color:#aaa;
+  color:white;
 }
 
 /* Cursor */
@@ -53,8 +53,31 @@ h2{
   border-right: 0.2rem solid #777;
 }
 
+#{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+
+.scroll-down{
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mouse{
+  width: 2.5rem;
+  height: 5rem;
+  border: 2px solid #fff;
+  border-radius: 2rem;
+  margin-bottom: .5rem;
+}
+
+
 #particles-js{
-  background:#333333;
+  background:#c03546;
   height:275px;
 }
 
