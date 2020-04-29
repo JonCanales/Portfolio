@@ -1,17 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:200,100,400');
 
+/* Page Styling */
 body{
   font-family: 'Raleway', sans-serif;
   height: 100vh;
-  background: #c03546 center center / cover;
+  background: #3498db; center center / cover;
   color: white;
   overflow:hidden;
-
+  background: rgb(52,152,219);
+background: linear-gradient(128deg, rgba(52,152,219,1) 30%, rgba(85,150,194,1) 63%);;
 }
 a {
   color: inherit;
 }
-li{
+ li{
   text-align: center;
   display: inline-block;
   padding: 0.5rem;
@@ -34,53 +36,188 @@ li:hover{
   padding: 0 3rem;
 }
 
+.container:before{
+  content='';
+  top:0;
+  left: 0;
+  width: 100%;
+  height:100%;
+  z-index:-1;
+}
+
 h1,h2{
   font-weight: 200;
   margin: 0.4rem;
 }
 
 h1{
-  font-size: 3.5rem;
+  font-size: 3.0rem;
 }
 
 h2{
   font-size: 2rem;
   color:white;
 }
+/* ************* */
 
 /* Cursor */
 .txt-type > .txt {
   border-right: 0.2rem solid #777;
 }
 
-#{
-  margin:0;
-  padding:0;
-  box-sizing: border-box;
-}
 
-
-.scroll-down{
-  position: absolute;
-  bottom: 5rem;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.mouse{
-  width: 2.5rem;
-  height: 5rem;
-  border: 2px solid #fff;
-  border-radius: 2rem;
-  margin-bottom: .5rem;
-}
-
-
+/* Particles */
 #particles-js{
-  background:#c03546;
+  background: rgb(52,152,219);
+background: linear-gradient(128deg, rgba(52,152,219,1) 30%, rgba(85,150,194,1) 63%);
   height:275px;
 }
 
+
+
+/* Hamburger Menu */
+.menu-wrap{
+  position: fixed;
+  top: 0;
+  left:0;
+  z-index: 1;
+}
+
+.menu-wrap .toggler{
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+
+.menu-wrap .hamburger{
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 1;
+  width:60px;
+  height:60px;
+  padding: 1rem;
+  background: #3498db;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* hamburger lines */
+.menu-wrap .hamburger > div{
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+/* top and bottom lines */
+.menu-wrap .hamburger > div:before,
+.menu-wrap .hamburger > div:after{
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top:-10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+/* Moves line down */
+.menu-wrap .hamburger > div:after{
+  top: 10px;
+}
+
+/* toggler animate */
+.menu-wrap .toggler:checked + .hamburger > div {
+  transform: rotate(135deg);
+}
+
+/* turn lines into X */
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+  top:0;
+  transform: rotate(90deg);
+}
+
+/* rotate on hover when checked */
+.menu-wrap .toggler:checked:hover + .hamburger > div{
+  transform: rotate(225deg);
+}
+
+/* Show Menu */
+.menu-wrap .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+  transform: scale(1);
+  transition-duration: var(--menu--speed);
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+   visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.menu-wrap .menu > div {
+  background: rgb(192, 53, 70,0.9);
+  border-radius: 50%;
+  width: 200vw;
+  height: 200vw;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+   transform: scale(0);
+  transition: all 0.4s ease;
+}
+
+.menu-wrap .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vw;
+   opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Can Change Font color here */
+.menu-wrap .menu > div > div > ul > li {
+  list-style: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.menu-wrap .menu > div > div > ul > li > a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+/* Media Queries */
 
 @media(min-width:1200px){
   h1{
