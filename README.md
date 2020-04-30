@@ -3,9 +3,9 @@
 ## Built With 
 - HTML/CSS
 - JavaScript(ES6)
-- [JQuery](https://jquery.com/). - Implemented Smooth Scroll Effect On Web Page
-- [Particles.js](https://github.com/VincentGarreau/particles.js/). - Javascript Library for creating particles.
-- [GitHub Pages](https://pages.github.com/). - Free Static Site Hosting Service by Github
+- [JQuery](https://jquery.com/) - Implemented Smooth Scroll Effect On Web Page
+- [Particles.js](https://github.com/VincentGarreau/particles.js/) - Javascript Library for creating particles.
+- [GitHub Pages](https://pages.github.com/) - Free Static Site Hosting Service by Github
 
 
 
