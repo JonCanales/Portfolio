@@ -1,6 +1,6 @@
 # Personal Portfolio Website 
 
-Built With \
+## Built With 
 - HTML/CSS
 - JavaScript(ES6)
 - [Particles.js](https://github.com/VincentGarreau/particles.js/). - Javascript Library for creating particles.
