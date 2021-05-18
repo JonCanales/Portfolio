@@ -90,20 +90,19 @@
 </div>
 
 
-
-<div class = "About Me "> 
-  <h2>
-    About Me 
-  </h2>
-</div>
-
   <script src = "main.js" type="text/JavaScript"/> </script>
   <script src = "https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.js"> </script>
-
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4M7NMLDCN8"></script>
   <script >
   particlesJS.load('particles-js','particles.json',function(){
     console.log('particles.json loaded...')
   });
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4M7NMLDCN8');
   </script>
 
 
